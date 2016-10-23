@@ -7,5 +7,8 @@ namespace SkeletonCode.CardGame
 {
 	public interface ICard
 	{
+        String getSuit();
+        String getValue();
+        String getCardName();
 	}
 }
