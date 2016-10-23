@@ -13,7 +13,7 @@ String.prototype.camelCaseToSpineCase = function () {
 String.prototype.spineCaseToCamelCase = function () { 
     // - or whitespace [-|\s]
     // \w search for characters only
-    return this.replace(/[-|\s](\w)/g, function(match, val){
+    return this.replace(/[-|\s](.)/g, function(match, val){
         return val.toUpperCase();
     }).trim();
 }
