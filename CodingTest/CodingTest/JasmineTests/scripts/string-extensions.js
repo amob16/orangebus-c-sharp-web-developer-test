@@ -18,5 +18,9 @@ String.prototype.spineCaseToCamelCase = function () {
     }).trim();
 }
 String.prototype.format = function () {
-
+    var args = arguments;
+    // find digits bound with braces eg {0}, {1} etc
+    return this.replace(/{(\d+)}/g, function (match, number) {
+        return args[number];
+    });
 }
