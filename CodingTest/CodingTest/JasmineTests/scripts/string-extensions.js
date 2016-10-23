@@ -10,5 +10,13 @@ String.prototype.camelCaseToSpineCase = function () {
     // cast everything to lowercase
     return this.replace(/[\s]+|([a-z0-9])(?=[A-Z])/g, "$1-").toLowerCase();
 }
-String.prototype.spineCaseToCamelCase = function () { }
-String.prototype.format = function () { }
+String.prototype.spineCaseToCamelCase = function () { 
+    // - or whitespace [-|\s]
+    // \w search for characters only
+    return this.replace(/[-|\s](\w)/g, function(match, val){
+        return val.toUpperCase();
+    }).trim();
+}
+String.prototype.format = function () {
+
+}
